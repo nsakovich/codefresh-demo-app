@@ -52,6 +52,8 @@ router.post('/agencies', (req, res) => {
 
 router.get('/agencies', (req, res) => {
   var where = {};
+  var order = 'grade';
+
   var success = (agencies) => res.status(200).send(agencies);
   var error = (err) => res.status(500).send({ message: err.message });
 
@@ -65,14 +67,14 @@ router.get('/agencies', (req, res) => {
     models.Tag.findOne({ include: [agencyAssociation], where: { name: req.query.tag } }).then((tag) => {
       if (tag) {
         // if tag exists return agencies associated with this tag. Includes name filter if needed.
-        return tag.getAgencies({ where: where, include: [tagsAssociation] }).then(success).catch(error);
+        return tag.getAgencies({ where: where, include: [tagsAssociation], order: order }).then(success).catch(error);
       } else {
         success([]); // return empty array if tag was not found
       }
     }).catch(error);
   } else {
     // return all agencies or filter by name only
-    return models.Agency.findAll({ include: [tagsAssociation], where: where }).then(success).catch(error);
+    return models.Agency.findAll({ include: [tagsAssociation], where: where, order: order }).then(success).catch(error);
   }
 
 });

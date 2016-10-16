@@ -11,9 +11,10 @@ module.exports = (sequelize, DataTypes) => {
     },
     description: DataTypes.TEXT,
     grade: {
-      type: DataTypes.STRING,
+      type: DataTypes.INTEGER,
       validate: {
-        isIn: [['Master', 'Jedi', 'Padawan']]
+        min: 1,
+        max: 3
       }
     }
   }, {
