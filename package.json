@@ -1,6 +1,9 @@
 {
   "name": "sortlist-challenge",
   "version": "1.0.0",
+  "scripts": {
+    "start": "node app.js"
+  },
   "author": "Nick Sakovich",
   "main": "app.js",
   "dependencies": {
