@@ -24,7 +24,7 @@ app.use('/api', require('./tag/crud'));
 app.set('port', conf.port);
 
 models.sequelize.sync().then(() => {
-  app.listen(app.get('port'), () => {
+  app.listen(process.env.PORT || app.get('port'), () => {
     console.log(`Express server listening on port ${app.get('port')}`);
   });
 });
