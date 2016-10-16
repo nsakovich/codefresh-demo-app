@@ -1,0 +1,64 @@
+{
+  "i18n": {
+    "title": "Backend Challenge",
+    "agencies": {
+
+      "list": {
+        "empty": "There are no agencies. Please create a new one or change filter settings ..."
+      },
+
+      "filter-form": {
+        "title": "Filter your agencies",
+        "name": {
+          "label": "Filter by name",
+          "placeholder": "Enter a name"
+        },
+        "tags": {
+          "label": "Filter by tags",
+          "placeholder": "Enter a tag"
+        }
+      },
+
+      "create-form": {
+        "title": "Add an agency",
+        "submit": "Submit",
+        "success": "Created successfully",
+
+        "name": {
+          "label": "Name",
+          "placeholder": "Agency's name",
+          "errors": {
+            "pattern": "Name should contain only alphanumeric characters",
+            "required": "Name is required field"
+          }
+        },
+
+        "tags": {
+          "label": "Tags",
+          "placeholder": "Please add some tags",
+          "description": "Separate by a comma",
+          "errors": {
+            "pattern": "Tags should contain only alphanumeric characters separated by a comma"
+          }
+        },
+
+        "grade": {
+          "label": "Grade",
+          "placeholder": "Please, select ...",
+          "errors": {
+            "required": "Grade is required"
+          }
+        },
+
+        "description": {
+          "label": "Description",
+          "placeholder": "Agency's description",
+          "errors": {
+            "required": "Description is required"
+          }
+        }
+
+      }
+    }
+  }
+}
