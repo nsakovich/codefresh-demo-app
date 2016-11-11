@@ -18,10 +18,12 @@
     "logging": false
   },
   "production": {
-    "username": "itweskbofpnkue",
-    "password": "G1lQ3M0C74stFOZmeVU5Qw6orX",
-    "database": "df369520ekvdt1",
-    "host": "ec2-54-243-203-143.compute-1.amazonaws.com",
-    "dialect": "postgres"
+    "username": "root",
+    "password": null,
+    "database": "database_development",
+    "host": "127.0.0.1",
+    "dialect": "sqlite",
+    "storage": "./database.sqlite",
+    "logging": false
   }
 }
